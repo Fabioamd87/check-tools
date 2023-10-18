@@ -1,0 +1,10 @@
+packaging
+azure-identity<1.11
+azure-keyvault-secrets
+requests-oauthlib
+dnspython
+termcolor
+keyring
+termcolor
+azure.mgmt.compute
+azure.identity
