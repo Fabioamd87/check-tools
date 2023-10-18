@@ -20,20 +20,13 @@ class VirusTotal(Engine):
         if self.userID:
             self.set_api_key(self.userID)
         else:
-            #if the key is not set in config file, read secops key from Azure Keyvault
             self.get_key()
 
     def set_api_key(self, key):
         self.virustotal_key = key
 
     def get_key(self):
-        print('Reading SecOps VirusTotal API key from keyvault, PLEASE CONFIGURE YOUR API KEY')
-        if sys.platform == 'win32':
-            self.virustotal_key = self.get_secret('virustotal-key')
-        else:
-            from linux_tools import load_keys
-            load_keys()
-            self.virustotal_key = os.environ.get('VIRUSTOTAL-KEY')
+        self.virustotal_key = self.get_secret('virustotal-key')
 
     def get_data(self, domain):
         # HTTP headers to query VT API

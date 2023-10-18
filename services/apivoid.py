@@ -19,13 +19,7 @@ class APIVoid(Engine):
         self.no_IP = False
         self.credit_finished = False
 
-        if sys.platform == 'win32':
-            self.apivoid_key = tools.get_config_entry('ApivoidAPIKey')
-        else:
-            from linux_tools import load_keys
-            #Storing keys in ENV variables
-            load_keys()
-            self.apivoid_key = os.environ.get('APIVOID-KEY')
+        self.apivoid_key = tools.get_config_entry('ApivoidAPIKey')
 
     def get_data(self, domain):
         # Get domain categories

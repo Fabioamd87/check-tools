@@ -9,7 +9,6 @@ import requests
 
 from urllib.parse import urlparse
 from termcolor import colored
-
 from data import settings
 
 CONFIG_FILE = 'data/config.json'
@@ -84,7 +83,3 @@ def set_config_entry(entry):
         with open(CONFIG_FILE, "w") as outfile:
             json.dump(entry, outfile)
         outfile.close()
-
-#I don't know if this feature is used
-#def load_settings():
-#    os.environ['VIRUSTOTAL'] = settings.VIRUSTOTAL_THROTTLING

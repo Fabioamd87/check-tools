@@ -1,13 +1,13 @@
-# Prerequisite
+# Prerequisites
 ```pip install -r requirements.txt```
 
 Convention used in this HOWTO:
 - <> for mandatory paraneters
 - [] for optional parameters
 
-#Usage
+# Usage
 
-##Check
+## Check
 To check a URL/domain
 ```sh
 python check_urls.py [engine] <URL/domain>
@@ -24,7 +24,7 @@ python check_urls.py -f <URL/domain>
 ```
 whitout argument it will check in data\URLs.txt
 
-#Other tools
+# Other tools
 To get all the domain from a website
 ```sh
 python scan_website.py [-f] [URL]
