@@ -96,4 +96,3 @@ if __name__ == "__main__":
                     key = sys.argv[2]
                     print('setting VirusTotal key')
                     set_config_entry({'VirusTotalAPIKey':key})
-  

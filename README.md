@@ -1,7 +1,9 @@
 # Prerequisites
 ```pip install -r requirements.txt```
 
-Convention used in this HOWTO:
+apt-get install python3-bs4 python3-dnspython python3-keyring python3-termcolor python3-azure
+
+# Convention used in this HOWTO
 - <> for mandatory paraneters
 - [] for optional parameters
 
