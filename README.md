@@ -5,6 +5,11 @@ Convention used in this HOWTO:
 - <> for mandatory paraneters
 - [] for optional parameters
 
+# Configuration
+set VirusTotal key:
+
+python3 tools.py set_virustotal_key <virustotal_key>
+
 # Usage
 
 ## Check

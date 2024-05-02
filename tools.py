@@ -1,4 +1,4 @@
-import os
+import os,sys
 import json
 import dns.resolver
 import keyring
@@ -83,3 +83,17 @@ def set_config_entry(entry):
         with open(CONFIG_FILE, "w") as outfile:
             json.dump(entry, outfile)
         outfile.close()
+if __name__ == "__main__":
+        if len(sys.argv) == 1:
+            pass
+        elif len(sys.argv) == 2:
+            pass
+        else:
+            match sys.argv[1]:
+                case 'set_virustotal_key':
+                    import pprint
+
+                    key = sys.argv[2]
+                    print('setting VirusTotal key')
+                    set_config_entry({'VirusTotalAPIKey':key})
+  
